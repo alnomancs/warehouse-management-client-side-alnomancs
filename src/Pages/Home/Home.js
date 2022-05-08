@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "../Shared/Header/Header";
+import Items from "../Items/Items";
+import Slider from "../Slider/Slider";
 
 const Home = () => {
   return (
     <div>
-      <h1>this is home banner</h1>
+      <Slider></Slider>
+      <Items></Items>
     </div>
   );
 };
