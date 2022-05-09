@@ -15,6 +15,23 @@ const Inventory = () => {
 
   const handleDelete = (id) => {
     console.log(id);
+    const confirmation = window.confirm(
+      "Are you want to delete this item from stock"
+    );
+    if (confirmation) {
+      const url = `http://localhost:5001/product/delete/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remainingItem = products.filter(
+            (product) => product._id !== id
+          );
+          setProducts(remainingItem);
+        });
+    }
   };
 
   return (

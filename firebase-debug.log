@@ -1,0 +1,36 @@
+[debug] [2022-05-09T02:12:05.475Z] ----------------------------------------------------------------------
+[debug] [2022-05-09T02:12:05.475Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-05-09T02:12:05.476Z] CLI Version:   10.8.0
+[debug] [2022-05-09T02:12:05.476Z] Platform:      darwin
+[debug] [2022-05-09T02:12:05.476Z] Node Version:  v16.13.2
+[debug] [2022-05-09T02:12:05.484Z] Time:          Mon May 09 2022 03:12:05 GMT+0100 (Western European Summer Time)
+[debug] [2022-05-09T02:12:05.484Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-09T02:12:05.525Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-09T02:12:05.526Z] > authorizing via signed-in user (alnoman.cs@gmail.com)
+[debug] [2022-05-09T02:12:05.526Z] [iam] checking project warehouse-management-2b449 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-09T02:12:05.527Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/warehouse-management-2b449:testIamPermissions [none]
+[debug] [2022-05-09T02:12:05.527Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/warehouse-management-2b449:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-09T02:12:06.389Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/warehouse-management-2b449:testIamPermissions 200
+[debug] [2022-05-09T02:12:06.390Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/warehouse-management-2b449:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-09T02:12:06.391Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/warehouse-management-2b449 [none]
+[debug] [2022-05-09T02:12:06.690Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/warehouse-management-2b449 200
+[debug] [2022-05-09T02:12:06.690Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/warehouse-management-2b449 {"projectId":"warehouse-management-2b449","projectNumber":"1095521560719","displayName":"warehouse-management","name":"projects/warehouse-management-2b449","resources":{"hostingSite":"warehouse-management-2b449"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'warehouse-management-2b449'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-05-09T02:12:06.692Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/warehouse-management-2b449 [none]
+[debug] [2022-05-09T02:12:06.986Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/warehouse-management-2b449 200
+[debug] [2022-05-09T02:12:06.987Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/warehouse-management-2b449 {"projectId":"warehouse-management-2b449","projectNumber":"1095521560719","displayName":"warehouse-management","name":"projects/warehouse-management-2b449","resources":{"hostingSite":"warehouse-management-2b449"},"state":"ACTIVE"}
+[debug] [2022-05-09T02:12:06.990Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095521560719/sites/warehouse-management-2b449/versions [none]
+[debug] [2022-05-09T02:12:06.990Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095521560719/sites/warehouse-management-2b449/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-05-09T02:12:08.491Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095521560719/sites/warehouse-management-2b449/versions 200
+[debug] [2022-05-09T02:12:08.491Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095521560719/sites/warehouse-management-2b449/versions {"name":"projects/1095521560719/sites/warehouse-management-2b449/versions/4c25ac84c036b2cb","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[warehouse-management-2b449]: beginning deploy... 
+[info] i  hosting[warehouse-management-2b449]: found 17 files in build 
+[debug] [2022-05-09T02:12:08.506Z] [hosting] uploading with 200 concurrency
+[debug] [2022-05-09T02:12:08.511Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2022-05-09T02:12:08.511Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":4}
+[debug] [2022-05-09T02:12:08.511Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095521560719/sites/warehouse-management-2b449/versions/4c25ac84c036b2cb:populateFiles [none]
+[debug] [2022-05-09T02:12:08.511Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1095521560719/sites/warehouse-management-2b449/versions/4c25ac84c036b2cb:populateFiles {"files":{"/asset-manifest.json":"ae2b8fb2f29473618fbb994ac5061710f478b5bc4ba105b26aea749588a608cf","/fakedb.json":"1033b9787291a3184034dbabc4192934d5e413db4d35f87211f27aeacc373744","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/index.html":"2fe52821832d42cbbe3fbe5d8495b5996e85d017196404433c64a48bd16867b8","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/products.json":"d9b3e556b36351950c7cdef47cddb43b4bcba62212c92f1cc4209819f4728bdf","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/css/main.073c9b0a.css":"b8b01675d86d4761fda201f6b97efd55ad059f3a43bbf10e2a88b732a23f0f2c","/static/css/main.073c9b0a.css.map":"8d187dc3706361f222aeba61cd3d06d5dcb82b78c0a83bb6b017516a8d7b2d3d","/static/js/787.198a0fdd.chunk.js":"1097f189349e1307697498e989c97086e47a343be4b7d6a8715cd36f36ed0d3a","/static/js/787.198a0fdd.chunk.js.map":"8efc785e66de60ec51dcb268a329b6dfe29cd6382d621b5be32a24fa4c8c5053","/static/js/main.5d632246.js":"1bc9c171e3a10be90405a26416e6024cc9e892eee14c2e0131c5448592c9b82b","/static/js/main.5d632246.js.LICENSE.txt":"5c0466b18f792a55be3b63b421c939317b4c43ebe0605b46563099ca001c8eeb","/static/js/main.5d632246.js.map":"e877a6fa4b96503d732596d275f7b2f7dcd4ffe8c7f534ae22fcfa077abb0059","/static/media/Newin_man.80ffb17d87f0b9b61fe1.jpeg":"43c987da8ebe2f7fa6ea06fbe3be63c0cafcbc34bb3128cc2a4cc460e52d8c90"}}
