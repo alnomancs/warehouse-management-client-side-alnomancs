@@ -1,16 +1,17 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 
 const AddItem = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const [user] = useAuthState(auth);
   const onSubmit = async (data) => {
     const email = user.email;
     const item = { ...data, email };
     console.log(item);
-    const url = `http://localhost:5001/product/additem`;
+    const url = `https://serene-brook-42107.herokuapp.com/product/additem`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -21,6 +22,8 @@ const AddItem = () => {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
+        toast("New Item Added");
+        reset();
       });
   };
   return (
@@ -79,6 +82,7 @@ const AddItem = () => {
         <p style={{ color: "red" }}>{}</p>
         <input className="mt-2" type="submit" value="Add Item " />
       </form>
+      <ToastContainer />{" "}
     </div>
   );
 };

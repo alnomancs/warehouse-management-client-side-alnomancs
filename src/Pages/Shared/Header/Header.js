@@ -26,9 +26,9 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/inventory">
+              {/* <Nav.Link as={Link} to="/inventory">
                 Manage Inventoy
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link as={Link} to="/blog">
                 Blog
               </Nav.Link>
@@ -39,21 +39,26 @@ const Header = () => {
             <Nav>
               {user ? (
                 <>
-                  <Nav.Link as={Link} to="/">
+                  <Nav.Link as={Link} to="/inventory">
                     Manage Item
                   </Nav.Link>
                   <Nav.Link as={Link} to="/inventory/additem">
                     Add Item
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/">
+                  <Nav.Link as={Link} to="/inventory/myitem">
                     My Item
                   </Nav.Link>
+                  <Nav.Link as={Link} to=""></Nav.Link>
+
+                  <button className="btn btn-link text-white text-decoration-none">
+                    <span>{user.displayName}</span>
+                  </button>
 
                   <button
                     className="btn btn-link text-white text-decoration-none"
                     onClick={handleSignOut}
                   >
-                    <span>{user.displayName}</span> sign out
+                    sign out
                   </button>
                 </>
               ) : (

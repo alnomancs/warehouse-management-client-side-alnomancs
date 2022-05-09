@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const MyItem = () => {
   const [products, setProducts] = useState([]);
+  const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch("https://serene-brook-42107.herokuapp.com/products")
+    fetch(`https://serene-brook-42107.herokuapp.com/products/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
-        ////console.log(data);
+        console.log(data);
         setProducts(data);
       });
   }, []);
@@ -36,14 +40,6 @@ const MyItem = () => {
     <div>
       <h1>Available Product : {products.length}</h1>
 
-      <div>
-        <button
-          className="btn btn-primary m-2"
-          onClick={() => navigate("/inventory/additem")}
-        >
-          Add New Item
-        </button>
-      </div>
       <Table striped bordered hover>
         <thead>
           <tr>

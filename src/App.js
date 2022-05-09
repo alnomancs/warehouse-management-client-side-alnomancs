@@ -11,6 +11,8 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import ItemDetail from "./Pages/ItemDetail/ItemDetail";
 import RequireAuth from "./Pages/Shared/RequiredAuth/RequireAuth";
 import AddItem from "./Pages/AddItem/AddItem";
+import MyItem from "./Pages/MyItem/MyItem";
+import NotFound from "./Pages/404/NotFound";
 
 function App() {
   return (
@@ -36,6 +38,14 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="/inventory/myitem"
+          element={
+            <RequireAuth>
+              <MyItem></MyItem>
+            </RequireAuth>
+          }
+        ></Route>
 
         <Route
           path="/inventory/:id"
@@ -49,6 +59,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/signin" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Register></Register>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
