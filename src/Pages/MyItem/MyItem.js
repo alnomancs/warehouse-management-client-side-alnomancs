@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
-const Inventory = () => {
+const MyItem = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -34,9 +32,6 @@ const Inventory = () => {
         });
     }
   };
-
-  const navigate = useNavigate();
-
   return (
     <div>
       <h1>Available Product : {products.length}</h1>
@@ -84,4 +79,4 @@ const Inventory = () => {
   );
 };
 
-export default Inventory;
+export default MyItem;

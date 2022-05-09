@@ -86,7 +86,7 @@ const ItemDetail = () => {
         <input className="btn btn-dark" type="submit" value="Add To Stock" />
       </form> */}
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="number" {...register("newStock", { min: 1, max: 1000 })} />
+        <input type="number" {...register("newStock", { min: 1, max: 1000 } )} />
         <input type="submit" value="Add to stock" />
       </form>
     </Card>
