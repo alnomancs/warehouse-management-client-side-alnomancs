@@ -7,7 +7,7 @@ const ItemDetail = () => {
   const { id } = useParams();
 
   const [item, setItem] = useState({});
-  const url = `http://localhost:5001/product/${id}`;
+  const url = `https://serene-brook-42107.herokuapp.com/product/${id}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -21,8 +21,8 @@ const ItemDetail = () => {
     const newItem = { ...item, stock };
     setItem(newItem);
 
-    const url = `http://localhost:5001/product/update?_id=${id}&stock=${item.stock}`;
-    console.log(url);
+    const url = `https://serene-brook-42107.herokuapp.com/product/update?_id=${id}&stock=${item.stock}`;
+    ////console.log(url);
 
     fetch(url, {
       method: "POST",
@@ -33,20 +33,20 @@ const ItemDetail = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
       });
   };
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    //console.log(data);
 
     const stock = parseInt(item.stock) + parseInt(data.newStock);
     const newItem = { ...item, stock };
     setItem(newItem);
 
-    const url = `http://localhost:5001/product/addToStock?_id=${id}&stock=${stock}`;
-    console.log(url);
+    const url = `https://serene-brook-42107.herokuapp.com/product/addToStock?_id=${id}&stock=${stock}`;
+    //console.log(url);
 
     fetch(url, {
       method: "POST",
@@ -57,7 +57,7 @@ const ItemDetail = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
       });
   };
   return (

@@ -5,27 +5,27 @@ const Inventory = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/products")
+    fetch("https://serene-brook-42107.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
-        //console.log(data);
+        ////console.log(data);
         setProducts(data);
       });
   }, []);
 
   const handleDelete = (id) => {
-    console.log(id);
+    //console.log(id);
     const confirmation = window.confirm(
       "Are you want to delete this item from stock"
     );
     if (confirmation) {
-      const url = `http://localhost:5001/product/delete/${id}`;
+      const url = `https://serene-brook-42107.herokuapp.com/product/delete/${id}`;
       fetch(url, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          //console.log(data);
           const remainingItem = products.filter(
             (product) => product._id !== id
           );

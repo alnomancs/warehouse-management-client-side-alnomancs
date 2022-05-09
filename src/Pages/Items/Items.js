@@ -7,10 +7,10 @@ const Items = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/inventoryItem")
+    fetch("https://serene-brook-42107.herokuapp.com/inventoryItem")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        ////console.log(data);
         setItems(data);
       });
   }, []);
