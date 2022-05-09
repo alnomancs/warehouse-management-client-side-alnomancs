@@ -56,7 +56,7 @@ function App() {
           }
         ></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
+        <Route path="/about/" element={<About></About>}></Route>
         <Route path="/signin" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>

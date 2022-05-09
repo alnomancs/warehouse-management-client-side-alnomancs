@@ -80,7 +80,7 @@ const AddItem = () => {
         <br />
 
         <p style={{ color: "red" }}>{}</p>
-        <input className="mt-2" type="submit" value="Add Item " />
+        <input className="mt-2" type="submit" value="Add Item " required />
       </form>
       <ToastContainer />{" "}
     </div>

@@ -14,7 +14,6 @@ const SupplierReview = () => {
         <Carousel.Item>
           <div className="d-flex">
             <Card className="mx-auto" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
                 <Card.Title>1</Card.Title>
                 <Card.Text>
@@ -25,7 +24,6 @@ const SupplierReview = () => {
               </Card.Body>
             </Card>
             <Card className="mx-auto" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
                 <Card.Title>1</Card.Title>
                 <Card.Text>
@@ -40,7 +38,6 @@ const SupplierReview = () => {
         <Carousel.Item>
           <div className="d-flex justify-content-center">
             <Card className="mx-auto" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
                 <Card.Title>2</Card.Title>
                 <Card.Text>
@@ -51,7 +48,6 @@ const SupplierReview = () => {
               </Card.Body>
             </Card>
             <Card className="mx-auto" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
                 <Card.Title>2</Card.Title>
                 <Card.Text>
@@ -66,7 +62,6 @@ const SupplierReview = () => {
         <Carousel.Item>
           <div className="d-flex">
             <Card className="mx-auto" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
                 <Card.Title>3</Card.Title>
                 <Card.Text>
@@ -77,7 +72,6 @@ const SupplierReview = () => {
               </Card.Body>
             </Card>
             <Card className="mx-auto" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
                 <Card.Title>3</Card.Title>
                 <Card.Text>

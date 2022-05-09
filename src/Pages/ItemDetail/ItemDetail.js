@@ -97,6 +97,7 @@ const ItemDetail = () => {
           <input
             type="number"
             {...register("newStock", { min: 1, max: 1000 })}
+            required
           />
           <input type="submit" value="Add to stock" />
         </form>
