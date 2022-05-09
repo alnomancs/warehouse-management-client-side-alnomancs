@@ -1,27 +1,34 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Item = ({ item }) => {
-  const { name, description, price, stock, supplierName, img } = item;
+  const { _id, name, description, price, stock, supplierName, img } = item;
+  const navigate = useNavigate();
+  const navigateToServiceDetail = (id) => {
+    navigate(`/inventory/${id}`);
+  };
   return (
-    <Col xs lg="4">
-      {" "}
-      <Card className="m-2">
-        <Card.Img variant="top" src={img} />
-        <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle>
-          <Card.Text>Description: {description}</Card.Text>
-          <Card.Text>Price: {price}</Card.Text>
-          <Card.Text>Stock: {stock}</Card.Text>
-          <Card.Text>Supplier Name: {supplierName}</Card.Text>
+    <div className="gx-5 col-sm-12 col-md-6 col-lg-4">
+      <div className="card w-100 m-3">
+        <img src={img} className="card-img-top" alt="" />
+        <div className="card-body ">
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text">Des: {description}</p>
+          <p className="card-text">Price: {price}</p>
+          <p className="card-text">Stock: {stock}</p>
+          <p className="card-text">Supplier Name: {supplierName}</p>
 
-          <Card.Link href="/inventory/id">Update</Card.Link>
-        </Card.Body>
-      </Card>
-    </Col>
+          <div className="text-center">
+            <button
+              onClick={() => navigateToServiceDetail(_id)}
+              className="btn btn-dark"
+            >
+              update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

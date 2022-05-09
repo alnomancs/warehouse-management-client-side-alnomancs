@@ -8,9 +8,7 @@ const Home = () => {
     <div>
       <Slider></Slider>
       <Items></Items>
-      <hr className="border border-5 border-info" />
       <SupplierReview></SupplierReview>
-      <hr />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import {} from "react-bootstrap";
+
 import Item from "../Item/Item";
 
 const Items = () => {
@@ -16,15 +17,15 @@ const Items = () => {
 
   return (
     <div>
-      <h1>Inventory Section</h1>
-
-      <Container>
-        <Row>
+      <div className="container" id="experts">
+        <h2 className="text-primary">Inventory Section</h2>
+        <div className="row gx-2">
           {items.map((item) => (
+            // <Expert key={expert.id} expert={expert}></Expert>
             <Item key={item._id} item={item}></Item>
           ))}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </div>
   );
 };
