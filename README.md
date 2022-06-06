@@ -1,4 +1,4 @@
-# Muzmatch the match maker web app
+# Warehouse management web app
 
 ## Project Live link
 
